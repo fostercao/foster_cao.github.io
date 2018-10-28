@@ -44,7 +44,7 @@
 
     <!-- Title -->
     
-    <title>归档：2018/2 - foster的博客</title>
+    <title>foster的博客</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
@@ -146,62 +146,88 @@
 </nav>
 
     <!-- Main Content -->
-    
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
 
-<!-- Page Header -->
-<!-- Set your background image for this header in the theme's configuration: index_cover -->
 <header class="intro-header" style="background-image: url('http://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/img/home-bg.jpg')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>2018/2</h1>
+                <div class="post-heading">
+                    <h1>Untitled</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2018-10-23
+                        
+                    </span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+
+            <!-- Gallery -->
             
-                <div class="post-preview">
-    <a href="/2018/02/27/hello-world/">
-        <h1 class="post-title archive">
-            Hello World
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2018-02-27
-    </p>
-</div>
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <hr>
+<p>title: python描述性统计数据设置问题 </p>
+<h2 id="date-2018-10-28"><a href="#date-2018-10-28" class="headerlink" title="date: 2018-10-28"></a>date: 2018-10-28</h2><p>&emsp;&emsp;做数据初探时,描述性统计是必不可少的方法之一。但经常会出现讨厌的科学计数法，脑海里再乘个10的多少倍,早就迷糊了,特别是在数值本身位数较少的情况下。  </p>
+<pre><code>import pandas as pd  
+import numpy as np  
+
+test_data=pd.DataFrame(np.random.randint(1000000,10000000,size=(60,5)))  
+</code></pre><pre><code>test_data.describe()  
+                  0             1             2             3             4  
+count  6.000000e+01  6.000000e+01  6.000000e+01  6.000000e+01  6.000000e+01  
+mean   5.548141e+06  5.864805e+06  5.659991e+06  5.444079e+06  6.003097e+06  
+std    2.712272e+06  2.631933e+06  2.590360e+06  2.397934e+06  2.328496e+06  
+min    1.104795e+06  1.794224e+06  1.045362e+06  1.336090e+06  1.710597e+06  
+25%    3.336698e+06  3.184258e+06  3.502132e+06  2.925767e+06  3.980461e+06  
+50%    5.406771e+06  6.468518e+06  5.394770e+06  5.447188e+06  6.112974e+06  
+75%    7.763060e+06  7.844444e+06  7.993366e+06  7.230982e+06  7.843638e+06  
+max    9.996856e+06  9.997625e+06  9.894273e+06  9.979221e+06  9.979215e+06  
+</code></pre><p>&emsp;&emsp;加上如下语句即可设置describe结果的格式(也可自己设置小数据个数):  </p>
+<pre><code>pd.set_option(&apos;display.float_format&apos;, lambda x: &apos;%.0f&apos; % x)  
+
+test_data.describe()  
+            0       1       2       3       4  
+count      60      60      60      60      60  
+mean  5548141 5864805 5659991 5444079 6003097  
+std   2712272 2631933 2590360 2397934 2328496  
+min   1104795 1794224 1045362 1336090 1710597  
+25%   3336698 3184258 3502132 2925767 3980461  
+50%   5406771 6468518 5394770 5447188 6112974  
+75%   7763060 7844444 7993366 7230982 7843638  
+max   9996856 9997625 9894273 9979221 9979215  
+</code></pre>
+
+                
+            </div>
+
+            <!-- Comments -->
             
-                <div class="post-preview">
-    <a href="/2018/02/27/foster测试文章/">
-        <h1 class="post-title archive">
-            foster测试文章
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2018-02-27
-    </p>
-</div>
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
             
-            <div class="archive-before-pagination"></div>
-            <ul class="pager">
-    
-    
-</ul>
         </div>
     </div>
-</div>
-
+</article>
 
     <!-- Footer -->
     <hr />
